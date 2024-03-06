@@ -3,7 +3,7 @@
 
 
 class Square:
-    """defines class and instantiates private instance attribute size with validation."""
+"""defines class and instantiates private instance attribute size with validation."""
 
     def __init__(self, size=0):
         if type(size) is not int:
