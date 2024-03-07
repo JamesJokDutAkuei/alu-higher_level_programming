@@ -1,3 +1,8 @@
+#!/usr/bin/python3
+"""creates class Square with
+private instance attribute size and public instance method"""
+
+
 class Square:
     """defines class with instantiated and validated private instance attribute
 and public instance method."""
