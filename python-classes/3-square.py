@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-"""defines a class Square"""
+"""
+defines a class Square"""
+
 
 class Square:
-    """instantiates Private instance attribute: size"""
+    """
+instantiates Private instance attribute: size"""
 
     def __init__(self, size=0):
         if type(size) is not int:
