@@ -1,71 +1,120 @@
 #!/usr/bin/python3
-"""creates class Rectangle"""
+""" Write a class Rectangle that defines a rectangle
+"""
 
 
 class Rectangle:
-    """defines class Rectangle with private instance attributes width/height
-and public instance methods to return the rectangle area and primeter
-and can print the rectangle using '#' with print() or str()
-and returns representation of the rectangle to be used by eval()"""
+    """creates class that defines a rectangle
+    Attributes:
+    empty
+    """
 
     def __init__(self, width=0, height=0):
-        """instantiates class instance with optional width/height attributes"""
-        self.width = width
+        """ method to initialize a Rectangle
+
+        Attribute:
+            width (int): optional, 0 by default
+            height (int): optional, 0 by default
+        """
         self.height = height
+        self.width = width
 
-    @property
-    def width(self):
-        """gets private instance attribute width"""
-        return (self.__width)
 
-    @width.setter
-    def width(self, value):
-        """sets private instance attribute width"""
-        if type(value) is not int:
-            raise TypeError("width must be an integer")
-        elif value < 0:
-            raise ValueError("width must be >= 0")
-        else:
-            self.__width = value
+@property
+def width(self):
+    """
+    gets width
 
-    @property
-    def height(self):
-        """gets private instance attribute height"""
-        return (self.__height)
+    Returns:
+        width (int)
+    """
+    return self.__width
 
-    @height.setter
-    def height(self, value):
-        """sets private instance attribute height"""
-        if type(value) is not int:
-            raise TypeError("height must be an integer")
-        elif value < 0:
-            raise ValueError("height must be >= 0")
-        else:
-            self.__height = value
 
-    def area(self):
-        """calculates area of the rectangle"""
-        return (self.width * self.height)
+@width.setter
+def width(self, value):
+    """
+    sets width of the rectangle
 
-    def perimeter(self):
-        """calculates perimeter of the rectangle"""
-        if self.width == 0 or self.height == 0:
-            return 0
-        return ((2 * self.width) + (2 * self.height))
+    Attributes:
+        width (int)
 
-    def __str__(self):
-        """returns string representation of rectangle for print() and str()"""
-        rec_string = ""
-        if self.width == 0 or self.height == 0:
-            return (rec_string)
-        for row in range(self.height):
-            for column in range(self.width):
-                rec_string += "#"
-            rec_string += "\n"
-        rec_string = rec_string[:-1]
-        return (rec_string)
+    Raises:
+        TypeError: width is not an integer
+        ValueError: width is negative
+    """
+    if type(value) is not int:
+        raise TypeError("width must be an integer")
+    elif value < 0:
+        raise ValueError("width must be >= 0")
+    else:
+        self.__width = value
 
-    def __repr__(self):
-        """returns string representation of rectangle for eval()"""
-        rec_str = "Rectangle(%s, %s)" % (self.width, self.height)
-        return (rec_str)
+
+@property
+def height(self):
+    """
+    gets height
+    Returns:
+        height (int)
+    """
+    return self.__height
+
+
+@height.setter
+def height(self, value):
+    """
+    sets height of the rectangle
+
+    Attributes:
+        height (int)
+
+    Raises:
+        TypeError: height is not an integer
+        ValueError: height is negative
+    """
+    if type(value) is not int:
+        raise TypeError("height must be an integer")
+    elif value < 0:
+        raise ValueError("height must be >= 0")
+    else:
+        self.__height = value
+
+
+def area(self):
+    """Public instance method that returns the rectangle area
+
+    Attributes:
+        area (int)
+
+    Returns:
+        area (int): area of the rectangle
+    """
+    return self.__height * self.__width
+
+
+def perimeter(self):
+    """Public instance method that returns the rectangle perimeter
+    Attributes:
+        perimeter (int): perimeter of the rectangle
+
+    Returns:
+        perimeter (int): 0 if height or width = 0
+    """
+    if self.__width == 0 or self.__height == 0:
+        return 0
+    else:
+        return 2 * self.__height + 2 * self.__width
+
+
+def str(self):
+    """prints a rectangle with #
+    
+    Returns:
+        a rectangle with #
+    """
+    if self.__width == 0 or self.__height == 0:
+        return ("")
+    else:
+        for i in range(self._height):
+            print("".format(# * self._width"))
