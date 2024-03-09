@@ -3,19 +3,20 @@
 creating a class Rectangle
 """
 
+
 class Rectangle:
     """initializing the attributes"""
     def __init__(self, width=0, height=0):
         self.__width = width
-        self.__height =height
+        self.__height = height
 
     @property
     def width(self):
         """a function to allow access to the private attribute width"""
-       return self.__width
+        return self.__width
 
-   @width.setter
-   def width(self, value):
+    @width.setter
+    def width(self, value):
        """manipulating the value of the privide atttribute width"""
        if not isinstance(value,int):
            raise TypeError("width must be an integer")
