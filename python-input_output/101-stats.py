@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""importing"""
+
+
 import random
 import sys
 from time import sleep
