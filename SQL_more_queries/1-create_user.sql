@@ -1,9 +1,7 @@
--- Attempt to create the user; if the user already exists, this will generate a warning, not an error.
-CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
+-- Creates MySQL server user_0d_1 with all privileges
+-- Password should be user_0d_1_pwd 
+-- If user already exists, script should not fail
 
--- Grant all privileges to the user on all databases and tables.
-GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost' WITH GRANT OPTION;
-
--- Apply the changes immediately.
-FLUSH PRIVILEGES;
-
+CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost'
+IDENTIFIED BY 'user_0d_1_pwd';
+GRANT ALL PRIVILEGES ON * . * TO 'user_0d_1'@'localhost'
