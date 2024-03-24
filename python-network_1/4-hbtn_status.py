@@ -1,11 +1,13 @@
 #!/usr/bin/python3
+"""__summary__
+- Write a Python script that
+- fetches https://intranet.hbtn.io/status.
 """
-Python script that fetches https://intranet.hbtn.io/status
-"""
+import requests
+
+
 if __name__ == "__main__":
-    import requests
-    response = requests.get('https://intranet.hbtn.io/status')
-    content = response.text
+    r = requests.get("https://intranet.hbtn.io/status")
     print("Body response:")
-    print("\t- type: {}".format(type(content)))
-    print("\t- content: {}".format(content))
+    print("\t- type: {}".format(type(r.text)))
+    print("\t- content: {}".format(r.text))
